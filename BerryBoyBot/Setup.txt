@@ -1,0 +1,30 @@
+Setup:
+
+sorry in advance, this may be a bit annoying
+
+1) Rename the env.txt file to .env, and accept the popup that says changing file extensions may cause them to act differently. Launch the .env file with Notepad and insert the values from steps 2, 3, and 4 into that file. Format should look like:
+
+TMI_TOKEN=oauth:0123456789
+CLIENT_ID=9876543210
+BOT_NICK=berryboybot
+CHANNEL=meleneh
+(sample values)
+
+2)To set up TMI_TOKEN, visit https://twitchapps.com/tmi/ while signed into your bot account and get a token (this may require a few tries because of twitch being twitch) you need to have the format be oauth:0123456789 after the equals sign
+
+3) To set up CLIENT_ID, visit https://dev.twitch.tv/ and register an app, you can set OAuth Redirect URLs to http://localhost and the category to chat bot, Client Type Confidetial, and then paste the Client ID after the equals sign
+
+4) type in the bots username after BOT_NICK= and your twitch channel name after CHANNEL= (the bot uses the $ prefix for the sake of avoiding collisions with other bots)
+
+5) run the python installer included in this folder, (https://www.python.org/downloads/release/python-3123/ or from this link) if you do not already have it downloaded
+
+6) Right click the setup.bat file and create a shortcut, then run that shortcut. This will install the required python modules.
+
+7) Right click the cmd shortcut, click properties, and under Shortcut tab, paste the directory of this folder (you can double click the bar showing your current directory path in the top of File Explorer) into the end of the Target box. IF YOUR BOT FOLDER IS NOT IN THE SAME DRIVE AS YOUR WINDOWS, ADD /D BETWEEN cd AND THE DIRECTORY. Example: cd /D W:\BerryBoyBot
+
+8) When you want to run the bot, launch the cmd shortcut and input the command pipenv run python bot.py and it should say "Loading environment variables" then type $pokestart into your twitch chat to start the game. The bot will automatically quit out of the script once the right pokemon is guessed, repeat this step to play again. If you receive ever an error while running the game that says something along the lines of "NoneType() variable does not have attribute len()", do not worry this is a bug that occurs while preventing longer messages from being echoed, but does not impact the script running.
+
+IF YOU ENCOUNTER ERRORS WITH PIPENV, ADD THE DIRECTORY IN THE YELLOW TEXT TO PATH https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/
+
+OR TRY DOWNLOADING PYTHON FROM THE WINDOWS STORE
+
