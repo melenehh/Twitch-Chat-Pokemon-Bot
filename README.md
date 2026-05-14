@@ -1,3 +1,5 @@
+# CURRENTLY BROKEN
+
 # Twitch-Chat-Pokemon-Bot
 
 MAKE SURE TO READ Setup.txt
